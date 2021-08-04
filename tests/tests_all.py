@@ -6,7 +6,9 @@ class Tests(unittest.TestCase):
     """Unit test class"""
 
     ## Definitions
-    _FILE_TEST_ =  'sample.json'
+    _FILE_TEST_ =  data_path / 'sample.json'
+
+    print('file', _FILE_TEST_)
 
     ## Instance
 

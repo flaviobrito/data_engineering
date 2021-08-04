@@ -24,12 +24,14 @@ class FileHandler:
 
     def extract(self,file_name=None):
         """ Read all files from ata path directory and save to FileHandler data property """
+        #files = []
         if file_name is None:
             files = glob.iglob(os.path.join(self.files_path,'**/*.json'), recursive=True)
         else:
-            files = file_name
+            files = [os.path.join(self.files_path,file_name)]
+            _fileHandler_logger.info("%s %s", "Extract a data from one file", files)
         for file in files:
-        #for file in glob.iglob(os.path.join(self.files_path,'**/*.json'), recursive=False):
+
             try:
                 with open(file) as inputData:
                     _fileHandler_logger.info("%s %s","Extract a data from files",file)
@@ -44,6 +46,7 @@ class FileHandler:
             except:
                 _fileHandler_logger.error("uncaught exception: %s", traceback.format_exc())
                 return False
+        return True
 
     def transform(self):
         """ Process data extracted and save to the data_processed property of FileHandler """

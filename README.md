@@ -71,17 +71,20 @@ Request for Report:
 ```
 
 ## Docker
-Create a docker_copose file using
-
+Create a docker_compose file using
+```bash
 postgresql version 13
 user = root
 password = root
-database=test_db
-
-Use ethernet IP address in pgadmin
+database=dwh_development
+```
+```bash
+# Use ethernet IP address in pgadmin
 pgadmin username = admin@admin.com
 pg_admin pass = root
 ports:"5050:80"
-
+```
 Run postgresql 
+```bash
 make postgres_compose
+```
