@@ -1,0 +1,9 @@
+bandit
+python-dotenv
+numpy
+pandas
+pytest
+matplotlib
+sqlalchemy
+psycopg2
+sphinx
