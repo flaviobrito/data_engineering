@@ -1,6 +1,6 @@
 # Developer Interview Task Handout
 
-##Objective
+## Objective
 The task consists of two parts:<br>
 1) Read the request log files (json) using a programing language of your choice and create a data set that allows you to analyze it.
 2) Analyze the usage of the reports and present some of the insights you have found. You can use a programing language of your
